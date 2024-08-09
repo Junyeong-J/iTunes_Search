@@ -11,15 +11,33 @@
 		723E46352C660DD1004B0E0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46342C660DD1004B0E0C /* SceneDelegate.swift */; };
 		723E463C2C660DD3004B0E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723E463B2C660DD3004B0E0C /* Assets.xcassets */; };
 		723E463F2C660DD3004B0E0C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 723E463E2C660DD3004B0E0C /* Base */; };
+		723E46472C6612EE004B0E0C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46462C6612EE004B0E0C /* TodayViewController.swift */; };
+		723E46492C6612F8004B0E0C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46482C6612F8004B0E0C /* GameViewController.swift */; };
+		723E464B2C661304004B0E0C /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E464A2C661304004B0E0C /* AppViewController.swift */; };
+		723E464D2C661326004B0E0C /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E464C2C661326004B0E0C /* ArcadeViewController.swift */; };
+		723E464F2C661334004B0E0C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E464E2C661334004B0E0C /* SearchViewController.swift */; };
+		723E46532C6613B2004B0E0C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46522C6613B2004B0E0C /* TabBarController.swift */; };
+		723E46562C661406004B0E0C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46552C661406004B0E0C /* BaseViewController.swift */; };
+		723E46582C661418004B0E0C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46572C661418004B0E0C /* BaseView.swift */; };
+		723E465B2C661482004B0E0C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E465A2C661482004B0E0C /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		723E462F2C660DD1004B0E0C /* iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		723E462F2C660DD1004B0E0C /* iTunesPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723E46322C660DD1004B0E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723E46342C660DD1004B0E0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		723E463B2C660DD3004B0E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723E463E2C660DD3004B0E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723E46402C660DD3004B0E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		723E46462C6612EE004B0E0C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		723E46482C6612F8004B0E0C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		723E464A2C661304004B0E0C /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		723E464C2C661326004B0E0C /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
+		723E464E2C661334004B0E0C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		723E46522C6613B2004B0E0C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		723E46552C661406004B0E0C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		723E46572C661418004B0E0C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		723E465A2C661482004B0E0C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +62,7 @@
 		723E46302C660DD1004B0E0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				723E462F2C660DD1004B0E0C /* iTunes.app */,
+				723E462F2C660DD1004B0E0C /* iTunesPractice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +70,10 @@
 		723E46312C660DD1004B0E0C /* iTunes */ = {
 			isa = PBXGroup;
 			children = (
+				723E46502C66134A004B0E0C /* View */,
+				723E46592C66146E004B0E0C /* ViewController */,
+				723E46542C6613D9004B0E0C /* BaseView */,
+				723E46512C661358004B0E0C /* TabBar */,
 				723E46322C660DD1004B0E0C /* AppDelegate.swift */,
 				723E46342C660DD1004B0E0C /* SceneDelegate.swift */,
 				723E463B2C660DD3004B0E0C /* Assets.xcassets */,
@@ -61,12 +83,49 @@
 			path = iTunes;
 			sourceTree = "<group>";
 		};
+		723E46502C66134A004B0E0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				723E465A2C661482004B0E0C /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		723E46512C661358004B0E0C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				723E46522C6613B2004B0E0C /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		723E46542C6613D9004B0E0C /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				723E46552C661406004B0E0C /* BaseViewController.swift */,
+				723E46572C661418004B0E0C /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		723E46592C66146E004B0E0C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				723E46462C6612EE004B0E0C /* TodayViewController.swift */,
+				723E46482C6612F8004B0E0C /* GameViewController.swift */,
+				723E464A2C661304004B0E0C /* AppViewController.swift */,
+				723E464C2C661326004B0E0C /* ArcadeViewController.swift */,
+				723E464E2C661334004B0E0C /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		723E462E2C660DD1004B0E0C /* iTunes */ = {
+		723E462E2C660DD1004B0E0C /* iTunesPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 723E46432C660DD3004B0E0C /* Build configuration list for PBXNativeTarget "iTunes" */;
+			buildConfigurationList = 723E46432C660DD3004B0E0C /* Build configuration list for PBXNativeTarget "iTunesPractice" */;
 			buildPhases = (
 				723E462B2C660DD1004B0E0C /* Sources */,
 				723E462C2C660DD1004B0E0C /* Frameworks */,
@@ -76,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = iTunes;
+			name = iTunesPractice;
 			productName = iTunes;
-			productReference = 723E462F2C660DD1004B0E0C /* iTunes.app */;
+			productReference = 723E462F2C660DD1004B0E0C /* iTunesPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 723E462A2C660DD1004B0E0C /* Build configuration list for PBXProject "iTunes" */;
+			buildConfigurationList = 723E462A2C660DD1004B0E0C /* Build configuration list for PBXProject "iTunesPractice" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				723E462E2C660DD1004B0E0C /* iTunes */,
+				723E462E2C660DD1004B0E0C /* iTunesPractice */,
 			);
 		};
 /* End PBXProject section */
@@ -131,8 +190,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723E46532C6613B2004B0E0C /* TabBarController.swift in Sources */,
+				723E464B2C661304004B0E0C /* AppViewController.swift in Sources */,
+				723E464F2C661334004B0E0C /* SearchViewController.swift in Sources */,
+				723E46492C6612F8004B0E0C /* GameViewController.swift in Sources */,
+				723E464D2C661326004B0E0C /* ArcadeViewController.swift in Sources */,
+				723E46562C661406004B0E0C /* BaseViewController.swift in Sources */,
 				723E46332C660DD1004B0E0C /* AppDelegate.swift in Sources */,
+				723E46582C661418004B0E0C /* BaseView.swift in Sources */,
 				723E46352C660DD1004B0E0C /* SceneDelegate.swift in Sources */,
+				723E46472C6612EE004B0E0C /* TodayViewController.swift in Sources */,
+				723E465B2C661482004B0E0C /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		723E462A2C660DD1004B0E0C /* Build configuration list for PBXProject "iTunes" */ = {
+		723E462A2C660DD1004B0E0C /* Build configuration list for PBXProject "iTunesPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				723E46412C660DD3004B0E0C /* Debug */,
@@ -345,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		723E46432C660DD3004B0E0C /* Build configuration list for PBXNativeTarget "iTunes" */ = {
+		723E46432C660DD3004B0E0C /* Build configuration list for PBXNativeTarget "iTunesPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				723E46442C660DD3004B0E0C /* Debug */,

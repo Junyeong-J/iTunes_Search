@@ -16,4 +16,7 @@ struct AppResult: Decodable {
     let artworkUrl60: String?
     let screenshotUrls: [String]?
     let trackCensoredName: String?
+    let artistName: String?
+    let genres: [String]?
+    let averageUserRating: Double?
 }

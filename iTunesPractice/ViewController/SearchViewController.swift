@@ -34,6 +34,14 @@ final class SearchViewController: BaseViewController<SearchView> {
         
         let output = viewModel.transform(input: input)
         
+        output.appList
+            .bind(to: rootView.tableView.rx.items(
+                cellIdentifier: SearchTableViewCell.identifier,
+                cellType: SearchTableViewCell.self)) { (row, element, cell) in
+                    cell.configureData(data: element)
+                }
+                .disposed(by: disposeBag)
+        
     }
     
 }

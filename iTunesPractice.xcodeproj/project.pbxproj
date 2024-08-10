@@ -27,6 +27,10 @@
 		723E466A2C6667BA004B0E0C /* TunesNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46692C6667BA004B0E0C /* TunesNetworkManager.swift */; };
 		723E466D2C6667C9004B0E0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 723E466C2C6667C9004B0E0C /* Alamofire */; };
 		723E46702C666BC2004B0E0C /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E466F2C666BC2004B0E0C /* iTunes.swift */; };
+		723E46722C6791CA004B0E0C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */; };
+		723E46742C679203004B0E0C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46732C679203004B0E0C /* BaseTableViewCell.swift */; };
+		723E46772C679247004B0E0C /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46762C679247004B0E0C /* ReuseIdentifierProtocol.swift */; };
+		723E467A2C679621004B0E0C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 723E46792C679621004B0E0C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,9 @@
 		723E46662C666705004B0E0C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		723E46692C6667BA004B0E0C /* TunesNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunesNetworkManager.swift; sourceTree = "<group>"; };
 		723E466F2C666BC2004B0E0C /* iTunes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
+		723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		723E46732C679203004B0E0C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		723E46762C679247004B0E0C /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +66,7 @@
 				723E466D2C6667C9004B0E0C /* Alamofire in Frameworks */,
 				723E46622C66588A004B0E0C /* RxCocoa in Frameworks */,
 				723E465F2C665879004B0E0C /* SnapKit in Frameworks */,
+				723E467A2C679621004B0E0C /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +92,7 @@
 		723E46312C660DD1004B0E0C /* iTunesPractice */ = {
 			isa = PBXGroup;
 			children = (
+				723E46752C679233004B0E0C /* Protocol */,
 				723E466E2C666BB0004B0E0C /* Model */,
 				723E46682C666717004B0E0C /* Network */,
 				723E46652C6666F9004B0E0C /* ViewModel */,
@@ -104,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				723E465A2C661482004B0E0C /* SearchView.swift */,
+				723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 			children = (
 				723E46552C661406004B0E0C /* BaseViewController.swift */,
 				723E46572C661418004B0E0C /* BaseView.swift */,
+				723E46732C679203004B0E0C /* BaseTableViewCell.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -161,6 +172,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		723E46752C679233004B0E0C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				723E46762C679247004B0E0C /* ReuseIdentifierProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +201,7 @@
 				723E46612C66588A004B0E0C /* RxCocoa */,
 				723E46632C66588A004B0E0C /* RxSwift */,
 				723E466C2C6667C9004B0E0C /* Alamofire */,
+				723E46792C679621004B0E0C /* Kingfisher */,
 			);
 			productName = iTunes;
 			productReference = 723E462F2C660DD1004B0E0C /* iTunesPractice.app */;
@@ -215,6 +235,7 @@
 				723E465D2C665879004B0E0C /* XCRemoteSwiftPackageReference "SnapKit" */,
 				723E46602C66588A004B0E0C /* XCRemoteSwiftPackageReference "RxSwift" */,
 				723E466B2C6667C9004B0E0C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				723E46782C679621004B0E0C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 723E46302C660DD1004B0E0C /* Products */;
 			projectDirPath = "";
@@ -242,15 +263,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723E46742C679203004B0E0C /* BaseTableViewCell.swift in Sources */,
 				723E46532C6613B2004B0E0C /* TabBarController.swift in Sources */,
 				723E46702C666BC2004B0E0C /* iTunes.swift in Sources */,
 				723E464B2C661304004B0E0C /* AppViewController.swift in Sources */,
 				723E464F2C661334004B0E0C /* SearchViewController.swift in Sources */,
 				723E46492C6612F8004B0E0C /* GameViewController.swift in Sources */,
 				723E464D2C661326004B0E0C /* ArcadeViewController.swift in Sources */,
+				723E46772C679247004B0E0C /* ReuseIdentifierProtocol.swift in Sources */,
 				723E46562C661406004B0E0C /* BaseViewController.swift in Sources */,
 				723E46672C666705004B0E0C /* SearchViewModel.swift in Sources */,
 				723E46332C660DD1004B0E0C /* AppDelegate.swift in Sources */,
+				723E46722C6791CA004B0E0C /* SearchTableViewCell.swift in Sources */,
 				723E46582C661418004B0E0C /* BaseView.swift in Sources */,
 				723E46352C660DD1004B0E0C /* SceneDelegate.swift in Sources */,
 				723E46472C6612EE004B0E0C /* TodayViewController.swift in Sources */,
@@ -504,6 +528,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		723E46782C679621004B0E0C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -526,6 +558,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 723E466B2C6667C9004B0E0C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		723E46792C679621004B0E0C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 723E46782C679621004B0E0C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

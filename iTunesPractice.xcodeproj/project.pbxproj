@@ -33,6 +33,9 @@
 		723E467A2C679621004B0E0C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 723E46792C679621004B0E0C /* Kingfisher */; };
 		723E467C2C679CC1004B0E0C /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */; };
 		723E467E2C679CF0004B0E0C /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E467D2C679CF0004B0E0C /* BaseCollectionViewCell.swift */; };
+		723E46802C67AAE7004B0E0C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E467F2C67AAE7004B0E0C /* DetailViewController.swift */; };
+		723E46822C67AAF1004B0E0C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46812C67AAF1004B0E0C /* DetailView.swift */; };
+		723E46842C67B00D004B0E0C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 723E46832C67B00D004B0E0C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		723E46762C679247004B0E0C /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 		723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		723E467D2C679CF0004B0E0C /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		723E467F2C67AAE7004B0E0C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		723E46812C67AAF1004B0E0C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		723E46832C67B00D004B0E0C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		723E46262C660DD1004B0E0C = {
 			isa = PBXGroup;
 			children = (
+				723E46832C67B00D004B0E0C /* .gitignore */,
 				723E46312C660DD1004B0E0C /* iTunesPractice */,
 				723E46302C660DD1004B0E0C /* Products */,
 			);
@@ -119,6 +126,7 @@
 				723E465A2C661482004B0E0C /* SearchView.swift */,
 				723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */,
 				723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */,
+				723E46812C67AAF1004B0E0C /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 				723E464A2C661304004B0E0C /* AppViewController.swift */,
 				723E464C2C661326004B0E0C /* ArcadeViewController.swift */,
 				723E464E2C661334004B0E0C /* SearchViewController.swift */,
+				723E467F2C67AAE7004B0E0C /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -258,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				723E463C2C660DD3004B0E0C /* Assets.xcassets in Resources */,
+				723E46842C67B00D004B0E0C /* .gitignore in Resources */,
 				723E463F2C660DD3004B0E0C /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,8 +286,10 @@
 				723E464F2C661334004B0E0C /* SearchViewController.swift in Sources */,
 				723E46492C6612F8004B0E0C /* GameViewController.swift in Sources */,
 				723E464D2C661326004B0E0C /* ArcadeViewController.swift in Sources */,
+				723E46802C67AAE7004B0E0C /* DetailViewController.swift in Sources */,
 				723E46772C679247004B0E0C /* ReuseIdentifierProtocol.swift in Sources */,
 				723E467C2C679CC1004B0E0C /* SearchCollectionViewCell.swift in Sources */,
+				723E46822C67AAF1004B0E0C /* DetailView.swift in Sources */,
 				723E46562C661406004B0E0C /* BaseViewController.swift in Sources */,
 				723E467E2C679CF0004B0E0C /* BaseCollectionViewCell.swift in Sources */,
 				723E46672C666705004B0E0C /* SearchViewModel.swift in Sources */,

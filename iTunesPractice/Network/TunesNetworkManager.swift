@@ -18,7 +18,7 @@ final class TunesNetworkManager {
     
     func getRequest<T: Decodable>(term: String, responseModel: T.Type) -> Observable<Result<T, Error>> {
         
-        let url = "https://itunes.apple.com/search"
+        let url =
         let parameters: [String: Any] = [
             "term": "\(term)",
             "country": "kr",

@@ -26,7 +26,7 @@ final class SearchViewController: BaseViewController<SearchView> {
         super.configureView()
     }
     
-    func bind() {
+    private func bind() {
         
         let input = SearchViewModel.Input(
             searchButtonTap: searchController.searchBar.rx.searchButtonClicked,
@@ -42,6 +42,17 @@ final class SearchViewController: BaseViewController<SearchView> {
                     cell.bind(data: Observable.just(element.screenshotUrls))
                 }
                 .disposed(by: disposeBag)
+        
+        Observable.zip(
+            rootView.tableView.rx.modelSelected(AppResult.self),
+            rootView.tableView.rx.itemSelected)
+        .map { $0.0 }
+        .subscribe(with: self) { owner, appData in
+            let detailVC = DetailViewController()
+            detailVC.appData = appData
+            owner.navigationController?.pushViewController(detailVC, animated: true)
+        }
+        .disposed(by: disposeBag)
         
     }
     

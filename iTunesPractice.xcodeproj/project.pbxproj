@@ -31,6 +31,8 @@
 		723E46742C679203004B0E0C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46732C679203004B0E0C /* BaseTableViewCell.swift */; };
 		723E46772C679247004B0E0C /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46762C679247004B0E0C /* ReuseIdentifierProtocol.swift */; };
 		723E467A2C679621004B0E0C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 723E46792C679621004B0E0C /* Kingfisher */; };
+		723E467C2C679CC1004B0E0C /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */; };
+		723E467E2C679CF0004B0E0C /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E467D2C679CF0004B0E0C /* BaseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		723E46732C679203004B0E0C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		723E46762C679247004B0E0C /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		723E467D2C679CF0004B0E0C /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				723E465A2C661482004B0E0C /* SearchView.swift */,
 				723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */,
+				723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				723E46552C661406004B0E0C /* BaseViewController.swift */,
 				723E46572C661418004B0E0C /* BaseView.swift */,
 				723E46732C679203004B0E0C /* BaseTableViewCell.swift */,
+				723E467D2C679CF0004B0E0C /* BaseCollectionViewCell.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				723E46492C6612F8004B0E0C /* GameViewController.swift in Sources */,
 				723E464D2C661326004B0E0C /* ArcadeViewController.swift in Sources */,
 				723E46772C679247004B0E0C /* ReuseIdentifierProtocol.swift in Sources */,
+				723E467C2C679CC1004B0E0C /* SearchCollectionViewCell.swift in Sources */,
 				723E46562C661406004B0E0C /* BaseViewController.swift in Sources */,
+				723E467E2C679CF0004B0E0C /* BaseCollectionViewCell.swift in Sources */,
 				723E46672C666705004B0E0C /* SearchViewModel.swift in Sources */,
 				723E46332C660DD1004B0E0C /* AppDelegate.swift in Sources */,
 				723E46722C6791CA004B0E0C /* SearchTableViewCell.swift in Sources */,

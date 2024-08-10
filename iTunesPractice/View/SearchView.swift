@@ -14,7 +14,7 @@ final class SearchView: BaseView {
         let view = UITableView()
         view.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         view.backgroundColor = .white
-        view.rowHeight = 80
+        view.rowHeight = 380
         view.separatorStyle = .none
         return view
     }()

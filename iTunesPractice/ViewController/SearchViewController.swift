@@ -39,6 +39,7 @@ final class SearchViewController: BaseViewController<SearchView> {
                 cellIdentifier: SearchTableViewCell.identifier,
                 cellType: SearchTableViewCell.self)) { (row, element, cell) in
                     cell.configureData(data: element)
+                    cell.bind(data: Observable.just(element.screenshotUrls))
                 }
                 .disposed(by: disposeBag)
         

@@ -8,10 +8,13 @@
 import UIKit
 import SnapKit
 import Kingfisher
+import RxSwift
+import RxCocoa
 
 final class SearchTableViewCell: BaseTableViewCell {
     
     private let width = UIScreen.main.bounds.width
+    var disposeBag = DisposeBag()
     
     private let appImageView: UIImageView = {
         let imageView = UIImageView()
@@ -66,14 +69,31 @@ final class SearchTableViewCell: BaseTableViewCell {
         return label
     }()
     
+    let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
+        collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
+    }()
+    
+    static func layout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3, height: (UIScreen.main.bounds.width / 3) * 2)
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 0
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.scrollDirection = .horizontal
+        return layout
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+    
     override func configureHierarchy() {
-        contentView.addSubview(appImageView)
-        contentView.addSubview(appTitleLabel)
-        contentView.addSubview(addButton)
-        contentView.addSubview(starImageView)
-        contentView.addSubview(appRateLabel)
-        contentView.addSubview(componyNameLabel)
-        contentView.addSubview(contentLabel)
+        [appImageView, appTitleLabel, addButton, starImageView,
+         appRateLabel, componyNameLabel, contentLabel, collectionView].forEach{ contentView.addSubview($0) }
     }
     
     override func configureLayout() {
@@ -115,6 +135,12 @@ final class SearchTableViewCell: BaseTableViewCell {
             make.centerY.equalTo(starImageView)
             make.trailing.equalTo(contentView).inset(20)
         }
+        
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(starImageView.snp.bottom).offset(10)
+            make.horizontalEdges.equalToSuperview()
+            make.height.equalTo(280)
+        }
     }
     
     func configureData(data: AppResult) {
@@ -124,6 +150,17 @@ final class SearchTableViewCell: BaseTableViewCell {
         appRateLabel.text = String(format: "%.1f", data.averageUserRating ?? 0)
         componyNameLabel.text = data.artistName
         contentLabel.text = data.genres?[0]
+    }
+    
+    func bind(data: Observable<[String]?>) {
+        data
+            .map { $0 ?? [] }
+            .bind(to: collectionView.rx.items(
+                cellIdentifier: SearchCollectionViewCell.identifier,
+                cellType: SearchCollectionViewCell.self)) { (row, element, cell) in
+                    cell.configureData(imageUrl: element)
+                }
+                .disposed(by: disposeBag)
     }
     
 }

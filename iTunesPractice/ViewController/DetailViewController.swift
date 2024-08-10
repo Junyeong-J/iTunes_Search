@@ -9,10 +9,15 @@ import UIKit
 
 final class DetailViewController: BaseViewController<DetailView> {
     
-    var appData: AppResult?
+    var appData: AppResult? {
+        didSet {
+            rootView.configureData(data: appData)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     override func configureView() {

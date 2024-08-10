@@ -14,7 +14,7 @@ import RxCocoa
 final class SearchTableViewCell: BaseTableViewCell {
     
     private let width = UIScreen.main.bounds.width
-    var disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     
     private let appImageView: UIImageView = {
         let imageView = UIImageView()
@@ -76,7 +76,7 @@ final class SearchTableViewCell: BaseTableViewCell {
         return collectionView
     }()
     
-    static func layout() -> UICollectionViewLayout {
+    static private func layout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3, height: (UIScreen.main.bounds.width / 3) * 2)
         layout.minimumLineSpacing = 10

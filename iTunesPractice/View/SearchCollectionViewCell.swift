@@ -11,7 +11,7 @@ import Kingfisher
 
 final class SearchCollectionViewCell: BaseCollectionViewCell {
     
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 10

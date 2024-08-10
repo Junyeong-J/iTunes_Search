@@ -109,7 +109,7 @@ final class SearchTableViewCell: BaseTableViewCell {
         }
         
         addButton.snp.makeConstraints { make in
-            make.width.equalTo(50)
+            make.width.equalTo(60)
             make.height.equalTo(30)
             make.centerY.equalTo(appImageView)
             make.trailing.equalTo(contentView).inset(20)

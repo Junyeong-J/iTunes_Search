@@ -37,6 +37,7 @@
 		723E46822C67AAF1004B0E0C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46812C67AAF1004B0E0C /* DetailView.swift */; };
 		723E46842C67B00D004B0E0C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 723E46832C67B00D004B0E0C /* .gitignore */; };
 		723E46862C67B039004B0E0C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46852C67B039004B0E0C /* APIKey.swift */; };
+		723E46882C67BA58004B0E0C /* DetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E46872C67BA58004B0E0C /* DetailCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		723E46812C67AAF1004B0E0C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		723E46832C67B00D004B0E0C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		723E46852C67B039004B0E0C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		723E46872C67BA58004B0E0C /* DetailCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				723E46712C6791CA004B0E0C /* SearchTableViewCell.swift */,
 				723E467B2C679CC1004B0E0C /* SearchCollectionViewCell.swift */,
 				723E46812C67AAF1004B0E0C /* DetailView.swift */,
+				723E46872C67BA58004B0E0C /* DetailCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				723E46352C660DD1004B0E0C /* SceneDelegate.swift in Sources */,
 				723E46472C6612EE004B0E0C /* TodayViewController.swift in Sources */,
 				723E466A2C6667BA004B0E0C /* TunesNetworkManager.swift in Sources */,
+				723E46882C67BA58004B0E0C /* DetailCollectionView.swift in Sources */,
 				723E465B2C661482004B0E0C /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

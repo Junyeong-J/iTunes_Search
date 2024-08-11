@@ -19,13 +19,27 @@ final class SearchView: BaseView {
         return view
     }()
     
+    let recentWordTableView: UITableView = {
+        let view = UITableView()
+        view.register(SearchRecentWordTableViewCell.self, forCellReuseIdentifier: SearchRecentWordTableViewCell.identifier)
+        view.backgroundColor = .white
+        view.rowHeight = 44
+        view.separatorStyle = .none
+        return view
+    }()
+    
     override func configureHierarchy() {
+        addSubview(recentWordTableView)
         addSubview(tableView)
     }
     
     override func configureLayout() {
+        recentWordTableView.snp.makeConstraints { make in
+            make.edges.equalTo(safeAreaLayoutGuide)
+        }
+        
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(safeAreaLayoutGuide)
         }
     }
     

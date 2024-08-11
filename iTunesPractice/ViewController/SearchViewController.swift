@@ -34,6 +34,18 @@ final class SearchViewController: BaseViewController<SearchView> {
         
         let output = viewModel.transform(input: input)
         
+        output.searchTextOutput
+            .map { $0.isEmpty }
+            .distinctUntilChanged()
+            .bind(to: rootView.tableView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        output.recentWordList
+            .drive(rootView.recentWordTableView.rx.items(cellIdentifier: SearchRecentWordTableViewCell.identifier, cellType: SearchRecentWordTableViewCell.self)) { (row, element, cell) in
+                cell.textLabel?.text = element
+            }
+            .disposed(by: disposeBag)
+        
         output.appList
             .bind(to: rootView.tableView.rx.items(
                 cellIdentifier: SearchTableViewCell.identifier,

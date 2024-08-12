@@ -9,9 +9,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class SearchViewModel {
+final class SearchViewModel: BaseViewModel {
     
-    private let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
+    
     
     private var defaults: UserDefaultsManager
     private var recentWordRelay: BehaviorRelay<[String]>

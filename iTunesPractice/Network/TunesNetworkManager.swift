@@ -7,8 +7,13 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
 import Alamofire
+
+enum iTunesNetworkError: Error {
+    case invalidURL
+    case networkError
+    case customError(message: String)
+}
 
 final class TunesNetworkManager {
     
@@ -16,7 +21,9 @@ final class TunesNetworkManager {
     
     private init () { }
     
-    func getRequest<T: Decodable>(term: String, responseModel: T.Type) -> Observable<Result<T, Error>> {
+    typealias iTunesHandler<T: Decodable> = Single<Result<T, iTunesNetworkError>>
+    
+    func getRequest<T: Decodable>(term: String, responseModel: T.Type) -> iTunesHandler<T> {
         
         let url = APIURL.iTunesURL
         let parameters: [String: Any] = [
@@ -26,18 +33,25 @@ final class TunesNetworkManager {
             "limit": "5"
         ]
         
-        return Observable.create { observer -> Disposable in
+        return Single.create { observer -> Disposable in
+            guard let url = URL(string: url) else {
+                observer(.success(.failure(.invalidURL)))
+                return Disposables.create()
+            }
+            
             AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default)
+//                .validate(statusCode: 200..<300)
                 .responseDecodable(of: responseModel.self) { response in
                     switch response.result {
                     case .success(let data):
-                        observer.onNext(.success(data))
-                        observer.onCompleted()
-                    case .failure(let error):
-                        observer.onError(error)
+                        observer(.success(.success(data)))
+                    case .failure(_):
+                        observer(.success(.failure(.networkError)))
                     }
                 }
             return Disposables.create()
         }
-    }
-}
+        .debug("API 통신")
+        //    }
+        
+    }}

@@ -66,9 +66,13 @@ final class SearchViewModel {
             .withLatestFrom(input.searchText)
             .distinctUntilChanged()
             .filter { !$0.isEmpty }
-            .flatMapLatest { term in
+            .flatMap { term in
                 TunesNetworkManager.shared.getRequest(term: term, responseModel: iTunesResponse.self)
+                    .catch { error in
+                        return Single.just(.success(iTunesResponse(resultCount: 0, results: [])))
+                    }
             }
+            .debug("Button Tap")
             .subscribe(onNext: { result in
                 switch result {
                 case .success(let response):
